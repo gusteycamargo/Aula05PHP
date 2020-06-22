@@ -10,9 +10,7 @@
         <tbody>
             @foreach ($cidades as $item)
                 <tr style="text-align: center">
-                    <td>{{ $item['id'] }}</td>
                     <td>{{ $item['nome'] }}</td>
-                    <td>{{ $item['porte'] }}</td>
                     <td>
                         <a href="{{ route('cidades.show', $item['id']) }}"><img src="{{ asset('img/icons/info.svg') }}"></a>
                         <a href="{{ route('cidades.edit', $item['id']) }}"><img src="{{ asset('img/icons/edit.svg') }}"></a>

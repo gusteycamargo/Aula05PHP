@@ -1,13 +1,8 @@
 @extends('templates.main', ['titulo' => "Cidades"])
 
 @section('conteudo')
-    <a href="{{ route('cidades.create') }}"><h4>Nova Cidade</h4></a>
+    <a class="btn btn-primary btn-lg btn-block" href="{{ route('cidades.create') }}"><h4>Nova Cidade</h4></a>
 
-    @component(
-        'components.tablelist', [
-            "header" => ['ID', 'Nome', 'E-mail', 'Eventos'],
-            "cidades" => $cidades
-        ]
-    )
-    @endcomponent
+    <x-tablelist :header="['Cidade', 'Eventos']" :cidades="$cidades"/>
+    
 @endsection

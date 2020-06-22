@@ -136,7 +136,7 @@ class Cidade extends Controller
         $indice = array_search($id, array_column($aux, 'id'));
 
         unset($aux[$indice]);
-        session(['cidades' => $aux]);
+        session(['cidadees' => $aux]);
 
         return redirect()->route('cidades.index');
     }
